@@ -1,5 +1,5 @@
 import { Activity, Users, Wallet } from "lucide-react";
-import Loader from "../components/ui/Loader";
+import BurnDownChart from "../components/common/BurnDownChart";
 import { useAuth } from "../hooks/useAuth";
 
 const metrics = [
@@ -30,9 +30,8 @@ function Dashboard() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-md border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-950">Recent activity</h2>
-          <Loader label="Preparing activity feed" />
+        <div className="mt-8">
+          <BurnDownChart />
         </div>
       </div>
     </section>
